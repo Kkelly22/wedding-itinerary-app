@@ -6,7 +6,7 @@ class CreatePlans < ActiveRecord::Migration[5.2]
       t.string :vendor
       t.string :location
       t.datetime :time
-      t.boolean :completed
+      t.boolean :completed, :default => false
 
       t.timestamps
     end
