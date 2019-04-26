@@ -17,8 +17,8 @@ ReactDOM.render((
   		<React.Fragment>
       	<Route path="/" render={App} />
     	</React.Fragment>
-  	</Router>)
-  </Provider>,
+  	</Router>
+  </Provider>),
   document.getElementById('root')
 );
 
