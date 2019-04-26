@@ -17,7 +17,7 @@ class AppointmentsContainer extends Component {
 const mapStateToProps =  state  => ({ appointments: state.appointments })
 
 const mapDispatchToProps = dispatch => ({
-  addAppointment: text => dispatch({ type: "ADD_APPOINTMENT", text }),
+  addAppointment: description => dispatch({ type: "ADD_APPOINTMENT", description }),
   deleteAppointment: id => dispatch({ type: "DELETE_APPOINTMENT", id })
 })
 
