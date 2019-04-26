@@ -4,13 +4,21 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import manageAppointments from './reducers/manageAppointments';
+
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+
+const store = createStore(manageAppointments, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render((
-  <Router>
-  	<React.Fragment>
-      <Route path="/" render={App} />
-    </React.Fragment>
-  </Router>),
+  <Provider store={store}>
+  	<Router>
+  		<React.Fragment>
+      	<Route path="/" render={App} />
+    	</React.Fragment>
+  	</Router>)
+  </Provider>,
   document.getElementById('root')
 );
 
