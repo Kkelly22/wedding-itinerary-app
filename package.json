@@ -1,5 +1,9 @@
 {
   "name": "wedding-itinerary-app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "cuid": "^2.1.6",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1"
+  }
 }
