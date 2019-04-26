@@ -3,32 +3,58 @@ import React, { Component } from 'react';
 class AppointmentInput extends Component {
   state = {
     id: '',
-    description: ''
+    user: '',
+    description: '',
+    vendor: '',
+    location: '',
+    time: '',
+    completed: false
   }
 
   handleOnChange(event) {
     this.setState({
-      description: event.target.value,
+      [event.target.name]: event.target.value,
     });
   }
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.addAppointment(this.state.description);
+    let itineraryObject = {
+      description: this.state.description,
+      vendor: this.state.vendor,
+      location: this.state.location,
+      time: this.state.time,
+      completed: this.state.completed
+    }
+    this.props.addAppointment(itineraryObject);
     this.setState({
-      description: ''
+      description: '',
+      vendor: '',
+      location: '',
+      time: '',
+      completed: false
     });
   }
 
   render() {
     return (
       <div>
-        <label>Appointment Description</label>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <input
-            type="text"
-            value={this.state.description}
-            onChange={(event) => this.handleOnChange(event)} />
+          <label>Appointment Description</label>
+          <input type="text" name="description" value={this.state.description} onChange={(event) => this.handleOnChange(event)} />
+          <br />
+          <label>Appointment Vendor</label>
+          <input type="text" name="vendor" value={this.state.vendor} onChange={(event) => this.handleOnChange(event)} />
+          <br />
+          <label>Appointment Location</label>
+          <input type="text" name="location" value={this.state.location} onChange={(event) => this.handleOnChange(event)} />
+          <br />
+          <label>Appointment Time</label>
+          <input type="datetime" name="time" value={this.state.time} onChange={(event) => this.handleOnChange(event)} />
+          <br />
+          <label>Appointment Completed?</label>
+          <input type="boolean" name="completed" value={this.state.completed} onChange={(event) => this.handleOnChange(event)} />
+          <br />
           <input type="submit" />
         </form>
       </div>

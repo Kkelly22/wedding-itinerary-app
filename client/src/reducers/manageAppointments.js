@@ -8,7 +8,12 @@ export default function manageAppointments(state = {
 	    case 'ADD_APPOINTMENT':
 		  const appointment = {
 	        id: cuid(),
-	        description: action.description
+	        user: '',
+	        description: action.itineraryObject.description,
+	        vendor: action.itineraryObject.vendor,
+	        location: action.itineraryObject.location,
+	        time: action.itineraryObject.time,
+	        completed: action.itineraryObject.completed
 	      }
 	      return {...state, appointments: [...state.appointments, appointment ]}
 
