@@ -1,21 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import managePlans from './reducers/managePlans';
+
+import thunk from 'redux-thunk';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware, compose} from 'redux';
+
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import manageAppointments from './reducers/manageAppointments';
 
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-
-const store = createStore(manageAppointments, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(managePlans, compose(applyMiddleware(thunk),window.devToolsExtension ? window.devToolsExtension() : f => f))
 
 ReactDOM.render((
   <Provider store={store}>
   	<Router>
   		<React.Fragment>
       	<Route path="/" render={App} />
+      	<Route path="/plans" render={App} />
     	</React.Fragment>
   	</Router>
   </Provider>),
