@@ -11,6 +11,8 @@ import {createStore, applyMiddleware, compose} from 'redux';
 
 import './index.css';
 import App from './App';
+import Signup from './Signup';
+import Login from './Login';
 
 const store = createStore(managePlans, compose(applyMiddleware(thunk),window.devToolsExtension ? window.devToolsExtension() : f => f))
 
@@ -18,8 +20,10 @@ ReactDOM.render((
   <Provider store={store}>
   	<Router>
   		<React.Fragment>
-      	<Route path="/" render={App} />
+      	<Route exact path="/" render={App} />
       	<Route path="/plans" render={App} />
+      	<Route path="/signup" render={Signup} />
+      	<Route path="/login" render={Login} />
     	</React.Fragment>
   	</Router>
   </Provider>),
