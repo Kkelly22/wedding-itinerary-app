@@ -1,4 +1,6 @@
 class PlansController < ApplicationController
+	protect_from_forgery with: :null_session
+	
 	def index
 		@plans = get_current_user.plans.all
 		render json: @plans 

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  protect_from_forgery with: :null_session
 
   def create
     user = User.create(user_params)
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :bride, :groom, :wedding_location, :wedding_time)
+    params.require(:user).permit(:username, :password, :bride, :groom, :wedding_location, :wedding_date)
   end
 
 end
