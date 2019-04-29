@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000'
+const baseUrl = ''
 
 export const loginUser = (user, callback) => {
   let data = {
