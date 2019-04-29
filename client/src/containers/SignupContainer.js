@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { withRouter, Link } from 'react-router-dom'
 
 import { createUser } from '../actions/userActions'
 
@@ -23,7 +24,7 @@ class SignupContainer extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.createUser(this.state);
+    this.props.createUser(this.state, () => this.props.history.push('/'));
     this.setState({
       username: '',
       password: '',
@@ -37,6 +38,7 @@ class SignupContainer extends Component {
   render() {
     return (
       <div>
+        <h1>Sign Up</h1>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <label>Username</label>
           <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
@@ -58,6 +60,7 @@ class SignupContainer extends Component {
           <br />
           <input type="submit" />
         </form>
+        <Link to='/login'>Log In</Link>
       </div>
     );
   }
