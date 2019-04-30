@@ -25,18 +25,3 @@ class PlansController < ApplicationController
 	end
 
 end
-
-application_controller - removed JWT and added regular session code 
-plans controller - changed get current user to current user
-users controller - removed JWT and added regular session code 
-auth.rb - removed JWT, no longer needed file
-App.js - moved the React Router into the App file instead of the index file
-plan actions - removed JWT
-user actions - removed JWT
-Login container - added withRouter to dispatch connection
-Signup container - added withRouter to dispatch connection
-index.js - moved React Router from index into App
-logo - removed as it was unused
-reducer Plans - removed debuggers
-reducer Users - added current to the state
-routes - added logout route
