@@ -14,9 +14,15 @@ class PlanInput extends Component {
   }
 
   handleOnChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+    if (event.target.name === "completed") {
+      this.setState({
+        [event.target.name]: event.target.checked
+      })
+    } else {
+      this.setState({
+        [event.target.name]: event.target.value
+      })
+    }
   }
 
   handleOnSubmit(event) {
@@ -33,7 +39,7 @@ class PlanInput extends Component {
 
   render() {
     return (
-      <div class="plan-input">
+      <div className="plan-input">
       <h3>Add to the Itinerary:</h3>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <label>Plan Description</label>

@@ -7,7 +7,7 @@ class UserInfo extends Component {
   //  const { user } = this.props.current;
 
     return (
-      <div class="user-info">
+      <div className="user-info">
         Bride: 
         <br />
         Groom:

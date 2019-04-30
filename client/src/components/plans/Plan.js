@@ -6,9 +6,8 @@ class Plan extends Component {
 
   render() {
     const { plan } = this.props;
-
     return (
-      <div class="plan-data">
+      <div className="plan-data">
         <td>{plan.description}</td>
         <td>{plan.vendor}</td>
         <td>{plan.location}</td>

@@ -5,7 +5,7 @@ import Countdown from 'react-countdown-now';
 class WeddingCountdown extends Component {
   render() {
     return (
-      <div class="countdown-info">
+      <div className="countdown-info">
         Time Until Wedding: <Countdown date={'Sat, 16 Nov 2019 05:00:00'} />
       </div>
     );
