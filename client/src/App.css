@@ -17,6 +17,13 @@
   padding: 20px;
 }
 
+.user-info {
+  display: inline-block;
+  background-color: #b3ccff;
+  text-align: left;
+  width: 400px;
+}
+
 .App {
   text-align: center;
 }
