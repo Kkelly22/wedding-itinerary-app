@@ -3,10 +3,9 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(user_params)
-
-    if user
-      jwt = Auth.encrypt({ user_id: user.id })
-      render json: { jwt: jwt, current: user }
+    if user && user.valid?
+      session[:user_id] = user.id
+      render json: { current: user }
     else
       render json: { error: 'Failed to Sign Up' }, status: 400
     end
@@ -14,17 +13,20 @@ class UsersController < ApplicationController
 
   def login
     user = User.find_by(username: params[:user][:username])
-
     if user && user.authenticate(params[:user][:password])
-      jwt = Auth.encrypt({ user_id: user.id })
-      render json: { jwt: jwt, current: user }
+      session[:user_id] = user.id
+      render json: { user: user }
     else
       render json: { error: 'Failed to Log In' }, status: 400
     end
   end
 
+  def logout
+    session.delete :user_id
+  end
+
   def show
-    render json: get_current_user
+    render json: current_user 
   end
 
   private
