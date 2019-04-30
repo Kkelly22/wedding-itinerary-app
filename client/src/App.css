@@ -1,5 +1,5 @@
 .plan-header th {
-  width: 200px;
+  width: 190px;
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
@@ -7,10 +7,14 @@
 }
 
 .plan-data td {
-  width: 200px;
+  width: 190px;
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
+}
+
+.plan-input {
+  padding: 20px;
 }
 
 .App {

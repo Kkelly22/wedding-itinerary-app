@@ -6,7 +6,6 @@ import PlanInput from '../components/plans/PlanInput'
 import Plans from '../components/plans/Plans'
 import { fetchPlans, deletePlan } from '../actions/planActions'
 
-
 class PlansContainer extends Component {
   
   componentWillMount() {
@@ -16,8 +15,8 @@ class PlansContainer extends Component {
   render() {
     return (
       <div>
-        <PlanInput />
         <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} />
+        <PlanInput />
       </div>
     )
   }

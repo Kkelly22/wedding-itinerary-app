@@ -33,7 +33,8 @@ class PlanInput extends Component {
 
   render() {
     return (
-      <div>
+      <div class="plan-input">
+      <h3>Add to the Itinerary:</h3>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <label>Plan Description</label>
           <input type="text" name="description" value={this.state.description} onChange={(event) => this.handleOnChange(event)} />
@@ -45,7 +46,7 @@ class PlanInput extends Component {
           <input type="text" name="location" value={this.state.location} onChange={(event) => this.handleOnChange(event)} />
           <br />
           <label>Plan Time</label>
-          <input type="datetime" name="time" value={this.state.time} onChange={(event) => this.handleOnChange(event)} />
+          <input type="datetime-local" name="time" value={this.state.time} onChange={(event) => this.handleOnChange(event)} />
           <br />
           <label>Plan Completed?</label>
           <input type="checkbox" name="completed" value={this.state.completed} onChange={(event) => this.handleOnChange(event)} />

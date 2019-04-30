@@ -8,6 +8,7 @@ class Plans extends Component {
   	const plans = this.props.plans.map(plan => <Plan key={plan.id} plan={plan} deletePlan={this.props.deletePlan}/>)
   return (
     <div class="plan-header">
+    <h1>Wedding Day Itinerary</h1>
      <table>
      	<thead>
           <tr>
