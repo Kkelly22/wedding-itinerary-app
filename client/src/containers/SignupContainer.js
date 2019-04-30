@@ -66,10 +66,8 @@ class SignupContainer extends Component {
   }
 };
 
-
-
 const mapDispatchToProps = dispatch => bindActionCreators({
   createUser
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(SignupContainer)
+export default withRouter(connect(null, mapDispatchToProps)(SignupContainer))
