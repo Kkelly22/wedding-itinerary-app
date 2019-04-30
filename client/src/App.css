@@ -24,6 +24,14 @@
   width: 400px;
 }
 
+.countdown-info {
+  display: inline-block;
+  background-color: #b3ffd9;
+  text-align: left;
+  width: 400px;
+}
+
+
 .App {
   text-align: center;
 }
