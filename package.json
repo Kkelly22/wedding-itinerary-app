@@ -4,6 +4,7 @@
   "dependencies": {
     "cuid": "^2.1.6",
     "react-redux": "^7.0.2",
+    "react-table": "^6.10.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   }
