@@ -5,8 +5,7 @@ export const fetchPlans = () => {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': sessionStorage.jwt
+      'Content-Type': 'application/json'
     }
   }
 
@@ -26,12 +25,11 @@ export const createPlan = plan => {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': sessionStorage.jwt
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({ plan })
   }
-  debugger;
+  
   return dispatch => {
     fetch(`${ baseUrl }/plans`, data)
       .then(response => response.json())
@@ -48,8 +46,7 @@ export const deletePlan = id => {
     method: 'DELETE',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': sessionStorage.jwt
+      'Content-Type': 'application/json'
     }
   }
 

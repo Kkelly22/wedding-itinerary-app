@@ -9,19 +9,16 @@ export const loginUser = (user, callback) => {
     },
     body: JSON.stringify({ user })
   }
-
+  
   return dispatch => {
     fetch(`${ baseUrl }/login`, data)
       .then(response => response.json())
       .then(user => {
-        sessionStorage.setItem('jwt', user.jwt)
-
-        dispatch({
+      dispatch({
           type: 'SET_USER',
-          payload: user.current
+          payload: user
         })
-
-        callback()
+      callback()
       })
       .catch(err => err)
   }
@@ -41,8 +38,6 @@ export const createUser = (user, callback) => {
     fetch(`${ baseUrl }/signup`, data)
       .then(response => response.json())
       .then(user => {
-        sessionStorage.setItem('jwt', user.jwt)
-
         dispatch({
           type: 'SET_USER',
           payload: user.current
@@ -59,8 +54,7 @@ export const fetchUser = () => {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': sessionStorage.jwt
+      'Content-Type': 'application/json'
     }
   }
 
