@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../../App.css';
 
 class Plan extends Component {
 
@@ -6,11 +7,13 @@ class Plan extends Component {
     const { plan } = this.props;
 
     return (
-      <div>
-        <li>
-          {plan.description}
-          <button onClick={() => this.props.deletePlan(plan.id)}> X </button>
-        </li>
+      <div class="plan-data">
+        <td>{plan.description}</td>
+        <td>{plan.vendor}</td>
+        <td>{plan.location}</td>
+        <td>{plan.time}</td>
+        <td>{plan.completed}</td>
+        <td><button onClick={() => this.props.deletePlan(plan.id)}> X </button></td>
       </div>
     );
   }
