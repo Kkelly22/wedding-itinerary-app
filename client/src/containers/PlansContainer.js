@@ -10,23 +10,26 @@ import { fetchPlans, deletePlan } from '../actions/planActions'
 
 class PlansContainer extends Component {
   
-  componentWillMount() {
-    this.props.fetchPlans()
+  componentDidMount() {
+    this.props.fetchPlans(this.props.current[0].id)
   }
 
   render() {
     return (
       <div>
-        <UserInfo />
+        <UserInfo user={this.props.current[0]}/>
         <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} />
-        <PlanInput />
+        <PlanInput user={this.props.current[0]}/>
         <WeddingCountdown />
       </div>
     )
   }
 }
 
-const mapStateToProps =  state  => ({ plans: state.plans })
+const mapStateToProps =  state  => ({ 
+  plans: state.plans,
+  current: state.current
+})
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   fetchPlans,
