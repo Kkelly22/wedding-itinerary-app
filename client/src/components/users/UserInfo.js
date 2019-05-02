@@ -4,17 +4,16 @@ import './../../App.css';
 class UserInfo extends Component {
 
   render() {
-  //  const { user } = this.props.current;
 
     return (
       <div className="user-info">
-        Bride: 
+        Bride: {this.props.user.bride}
         <br />
-        Groom:
+        Groom: {this.props.user.groom}
         <br />
-        Wedding Location:
+        Wedding Location: {this.props.user.wedding_location}
         <br />
-        Wedding Date:
+        Wedding Date: {this.props.user.wedding_date}
       </div>
     );
   }
