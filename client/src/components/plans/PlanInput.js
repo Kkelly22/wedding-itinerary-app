@@ -10,7 +10,8 @@ class PlanInput extends Component {
     vendor: '',
     location: '',
     time: '',
-    completed: false
+    completed: false,
+    user_id: 0
   }
 
   handleOnChange(event) {
@@ -27,13 +28,14 @@ class PlanInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.createPlan(this.state);
+    this.props.createPlan({...this.state, user_id: this.props.user.id});
     this.setState({
       description: '',
       vendor: '',
       location: '',
       time: '',
-      completed: false
+      completed: false,
+      user_id: 0
     });
   }
 
