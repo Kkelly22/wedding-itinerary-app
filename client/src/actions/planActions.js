@@ -1,6 +1,5 @@
-const baseUrl = ''
 
-export const fetchPlans = () => {
+export const fetchPlans = (user) => {
   let data = {
     method: 'GET',
     headers: {
@@ -10,7 +9,7 @@ export const fetchPlans = () => {
   }
 
   return dispatch => {
-    fetch(`${ baseUrl }/plans`, data)
+    fetch(`user/${user}/plans`, data)
       .then(response => response.json())
       .then(plans => dispatch({
           type: 'FETCH_PLANS',
@@ -31,7 +30,7 @@ export const createPlan = plan => {
   }
   
   return dispatch => {
-    fetch(`${ baseUrl }/plans`, data)
+    fetch(`plans`, data)
       .then(response => response.json())
       .then(plan => dispatch({
         type: 'CREATE_PLAN',
@@ -51,7 +50,7 @@ export const deletePlan = id => {
   }
 
   return dispatch => {
-    fetch(`${ baseUrl }/plans/${ id }`, data)
+    fetch(`plans/${ id }`, data)
       .then(response => response.json())
       .then(plan => dispatch({
         type: 'DELETE_PLAN',

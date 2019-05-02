@@ -1,41 +1,16 @@
-const baseUrl = ''
 
 export const loginUser = (user, callback) => {
   let data = {
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ user })
+    
   }
-  
+  debugger
   return dispatch => {
-    fetch(`${ baseUrl }/login`, data)
-      .then(response => response.json())
-      .then(user => {
-      dispatch({
-          type: 'SET_USER',
-          payload: user
-        })
-      callback()
-      })
-      .catch(err => err)
-  }
-}
-
-export const createUser = (user, callback) => {
-  let data = {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ user })
-  }
-
-  return dispatch => {
-    fetch(`${ baseUrl }/signup`, data)
+    fetch(`/login?user=${encodeURIComponent(user.username)}`, data)
       .then(response => response.json())
       .then(user => {
         dispatch({
@@ -49,44 +24,29 @@ export const createUser = (user, callback) => {
   }
 }
 
-export const fetchUser = () => {
+
+
+export const createUser = (user, callback) => {
   let data = {
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
-    }
+    },
+    body: JSON.stringify({ user })
   }
 
   return dispatch => {
-    fetch(`${ baseUrl }/user`, data)
+    fetch(`signup`, data)
       .then(response => response.json())
       .then(user => {
         dispatch({
           type: 'SET_USER',
-          payload: user
+          payload: user.current
         })
+
+        callback()
       })
-      .catch(err => err)
-  }
-}
-
-export const deleteUser = id => {
-  let data = {
-    method: 'DELETE',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  }
-
-  return dispatch => {
-    fetch(`${ baseUrl }/users/${ id }`, data)
-      .then(response => response.json())
-      .then(user => dispatch({
-        type: 'DELETE_PLAN',
-        payload: user
-      }))
       .catch(err => err)
   }
 }
