@@ -1,7 +1,8 @@
-export default function manageUsers(state = {}, action) {
+export default function manageUsers(state = [], action) {
 	switch (action.type) {
 		case 'SET_USER':
-	      return { ...state, current: action.payload }
+		debugger
+	      return [...state, action.payload]
 	    default: return state
 	}
 }
