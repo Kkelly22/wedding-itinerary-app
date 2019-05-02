@@ -4,8 +4,7 @@ import './../../App.css';
 
 class Plans extends Component {
   render(){
-
-  	const plans = this.props.plans.map(plan => <Plan key={plan.id} plan={plan} deletePlan={this.props.deletePlan}/>)
+  	const plans = this.props.plans === {} ? this.props.plans.map(plan => <Plan key={plan.id} plan={plan} deletePlan={this.props.deletePlan}/>) : []
   return (
     <div className="plan-header">
     <h1>Wedding Day Itinerary</h1>
@@ -23,7 +22,7 @@ class Plans extends Component {
 
         <tbody>
           <tr>
-          	{plans}
+            {plans}
           </tr>
         </tbody>
       </table>
