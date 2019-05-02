@@ -4,29 +4,28 @@ class UsersController < ApplicationController
   def create
     user = User.create(user_params)
     if user && user.valid?
-      session[:user_id] = user.id
       render json: { current: user }
     else
       render json: { error: 'Failed to Sign Up' }, status: 400
     end
   end
 
+
   def login
-    user = User.find_by(username: params[:user][:username])
-    if user && user.authenticate(params[:user][:password])
-      session[:user_id] = user.id
-      render json: { user: user }
+    user = User.find_by(username: params[:user])
+    if user 
+      render json: { current: user }
     else
       render json: { error: 'Failed to Log In' }, status: 400
     end
   end
 
+
   def logout
-    session.delete :user_id
+    render json: { current: {} }
   end
 
   def show
-    render json: current_user 
   end
 
   private
