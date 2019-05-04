@@ -20,15 +20,25 @@
 .user-info {
   display: inline-block;
   background-color: #b3ccff;
-  text-align: left;
+  text-align: center;
   width: 400px;
+  padding: 15px;
+  border: 1px solid black;
 }
 
 .countdown-info {
   display: inline-block;
   background-color: #b3ffd9;
-  text-align: left;
+  text-align: center;
   width: 400px;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+a {
+  color: #0000b3;
+  display: block;
+  padding-top: 20px;
 }
 
 

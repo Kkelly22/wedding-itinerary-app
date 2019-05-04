@@ -8,7 +8,7 @@ class Plans extends Component {
   return (
     <div className="plan-header">
     <h1>Wedding Day Itinerary</h1>
-     <table>
+     <table align="center">
      	<thead>
           <tr>
             <th>Description</th>
