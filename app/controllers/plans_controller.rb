@@ -1,6 +1,4 @@
-class PlansController < ApplicationController
-	protect_from_forgery with: :null_session
-	
+class PlansController < ApplicationController	
 	def index
 		@user = User.find_by(id: params[:user_id])
 		@plans = @user.plans.all
