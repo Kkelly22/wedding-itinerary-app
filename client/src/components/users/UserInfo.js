@@ -7,13 +7,7 @@ class UserInfo extends Component {
 
     return (
       <div className="user-info">
-        Bride: {this.props.user.bride}
-        <br />
-        Groom: {this.props.user.groom}
-        <br />
-        Wedding Location: {this.props.user.wedding_location}
-        <br />
-        Wedding Date: {this.props.user.wedding_date}
+        The Wedding of {this.props.user.bride} & {this.props.user.groom}
       </div>
     );
   }

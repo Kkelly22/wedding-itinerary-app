@@ -19,6 +19,16 @@
 
 .user-info {
   display: inline-block;
+  text-align: center;
+  width: 400px;
+  padding: 15px;
+  font-family: "Times New Roman", Times, serif;
+  font-style : italic ;
+  font-size: 30px;
+}
+
+.wedding-info {
+  display: inline-block;
   background-color: #b3ccff;
   text-align: center;
   width: 400px;
