@@ -9,7 +9,7 @@ export const fetchPlans = (user) => {
   }
 
   return dispatch => {
-    fetch(`user/${user}/plans`, data)
+    fetch(`users/${user}/plans`, data)
       .then(response => response.json())
       .then(plans => dispatch({
           type: 'FETCH_PLANS',
@@ -30,7 +30,7 @@ export const createPlan = plan => {
   }
   
   return dispatch => {
-    fetch(`plans`, data)
+    fetch(`users/${plan.user_id}/plans`, data)
       .then(response => response.json())
       .then(plan => dispatch({
         type: 'CREATE_PLAN',
@@ -40,7 +40,7 @@ export const createPlan = plan => {
   }
 }
 
-export const deletePlan = id => {
+export const deletePlan = plan => {
   let data = {
     method: 'DELETE',
     headers: {
@@ -50,11 +50,11 @@ export const deletePlan = id => {
   }
 
   return dispatch => {
-    fetch(`plans/${ id }`, data)
+    fetch(`users/${plan.user_id}/plans/${plan.id}`, data)
       .then(response => response.json())
       .then(plan => dispatch({
         type: 'DELETE_PLAN',
-        payload: plan
+        payload: plan.id
       }))
       .catch(err => err)
   }

@@ -13,7 +13,7 @@ class Plan extends Component {
         <td>{plan.location}</td>
         <td> <Moment parse="YYYY-MM-DD HH:mm">{plan.time}</Moment></td>
         <td>{ plan.completed ? "Yes" : "No" }</td>
-        <td><button onClick={() => this.props.deletePlan(plan.id)}> X </button></td>
+        <td><button onClick={() => this.props.deletePlan(plan)}> X </button></td>
       </div>
     );
   }
