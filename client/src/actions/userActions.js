@@ -8,7 +8,7 @@ export const loginUser = (user, callback) => {
     },
     
   }
-  debugger
+  
   return dispatch => {
     fetch(`/login?user=${encodeURIComponent(user.username)}`, data)
       .then(response => response.json())
