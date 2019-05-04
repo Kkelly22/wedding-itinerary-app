@@ -7,12 +7,6 @@ class PlansController < ApplicationController
 		render json: @plans 
     end
 
-    def show
-		@user = User.find_by(id: params[:id])
-		@plans = @user.plans.all
-		render json: @plans 
-    end
-
 	def create
 		@user = User.find_by(id: params[:plan][:user_id])
 		@plan = @user.plans.build(description: params[:plan][:description], vendor: params[:plan][:vendor], location: params[:plan][:location], time: params[:plan][:time], completed: params[:plan][:completed], )
