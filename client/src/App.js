@@ -4,7 +4,7 @@ import PlansContainer from './containers/PlansContainer';
 import Signup from './Signup';
 import Login from './Login';
 
-import { BrowserRouter as Router, Route, Redirect, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
