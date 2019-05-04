@@ -2,6 +2,9 @@ class PlansController < ApplicationController
 	protect_from_forgery with: :null_session
 	
 	def index
+		@user = User.find_by(id: params[:user_id])
+		@plans = @user.plans.all
+		render json: @plans 
     end
 
     def show
