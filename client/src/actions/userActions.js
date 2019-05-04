@@ -10,7 +10,7 @@ export const loginUser = (user, callback) => {
   }
   
   return dispatch => {
-    fetch(`/login?user=${encodeURIComponent(user.username)}`, data)
+    fetch(`/login?user=${encodeURIComponent(user.username)}&password=${encodeURIComponent(user.password)}`, data)
       .then(response => response.json())
       .then(user => {
         dispatch({
