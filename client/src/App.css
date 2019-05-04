@@ -20,16 +20,18 @@
 .user-info {
   display: inline-block;
   text-align: center;
-  width: 400px;
+  width: 700px;
   padding: 15px;
+  margin: 10px;
   font-family: "Times New Roman", Times, serif;
   font-style : italic ;
-  font-size: 30px;
+  font-size: 40px;
+  background-image: linear-gradient(#e6b800, #ffffff, #e6b800)
 }
 
 .wedding-info {
   display: inline-block;
-  background-color: #b3ccff;
+  background-color: #e0e0eb;
   text-align: center;
   width: 400px;
   padding: 15px;
@@ -38,7 +40,7 @@
 
 .countdown-info {
   display: inline-block;
-  background-color: #b3ffd9;
+  background-color: #e0e0eb;
   text-align: center;
   width: 400px;
   padding: 15px;

@@ -7,7 +7,7 @@ class Plans extends Component {
   	const plans = !!this.props.plans ? this.props.plans.map(plan => <Plan key={plan.id} plan={plan} deletePlan={this.props.deletePlan}/>) : []
   return (
     <div className="plan-header">
-    <h1>Wedding Day Itinerary</h1>
+    <h2>Wedding Day Itinerary</h2>
      <table align="center">
      	<thead>
           <tr>
