@@ -25,6 +25,8 @@ class PlansContainer extends Component {
         <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} />
         <PlanInput user={this.props.current}/>
         <WeddingCountdown />
+        <br />
+        <br />
         <Link to='/login'>Log Out</Link>
       </div>
     )

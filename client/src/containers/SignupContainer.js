@@ -60,6 +60,7 @@ class SignupContainer extends Component {
           <br />
           <input type="submit" />
         </form>
+        <br />
         <Link to='/login'>Log In</Link>
       </div>
     );
