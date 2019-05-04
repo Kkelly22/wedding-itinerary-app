@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { withRouter, Link } from 'react-router-dom'
 
 import PlanInput from '../components/plans/PlanInput'
 import Plans from '../components/plans/Plans'
@@ -21,6 +22,7 @@ class PlansContainer extends Component {
         <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} />
         <PlanInput user={this.props.current}/>
         <WeddingCountdown />
+        <Link to='/login'>Log Out</Link>
       </div>
     )
   }
