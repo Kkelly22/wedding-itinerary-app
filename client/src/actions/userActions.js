@@ -20,7 +20,7 @@ export const loginUser = (user, callback) => {
 
         callback()
       })
-      .catch(err => err)
+      .catch(err => alert("Incorrect Username/Password")) 
   }
 }
 
@@ -47,6 +47,6 @@ export const createUser = (user, callback) => {
 
         callback()
       })
-      .catch(err => err)
+      .catch(err => alert("Username/Password Already Exist!"))
   }
 }
