@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  resources :plans
-  resources :users
+  resources :users do
+  	resources :plans
+  end
 
    get 'user', to: 'users#show', as: 'user_show'
    post 'signup', to: 'users#create', as: 'user_signup'
