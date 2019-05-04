@@ -56,7 +56,7 @@ class SignupContainer extends Component {
           <input type="text" name="wedding_location" value={this.state.wedding_location} onChange={(event) => this.handleOnChange(event)} />
           <br />
            <label>Wedding Date</label>
-          <input type="text" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
+          <input type="datetime-local" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
           <br />
           <input type="submit" />
         </form>

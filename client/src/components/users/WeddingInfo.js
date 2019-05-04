@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './../../App.css';
+import Moment from 'react-moment';
 
 class WeddingInfo extends Component {
 
@@ -9,7 +10,7 @@ class WeddingInfo extends Component {
       <div className="wedding-info">
         Wedding Location: {this.props.user.wedding_location}
         <br />
-        Wedding Date: {this.props.user.wedding_date}
+        Wedding Date: <Moment parse="YYYY-MM-DD HH:mm">{this.props.user.wedding_date}</Moment> 
       </div>
     );
   }
