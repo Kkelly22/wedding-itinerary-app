@@ -56,10 +56,7 @@ class PlanInput extends Component {
           <label>Plan Time</label>
           <input type="datetime-local" name="time" value={this.state.time} onChange={(event) => this.handleOnChange(event)} />
           <br />
-          <label>Plan Completed?</label>
-          <input type="checkbox" name="completed" value={this.state.completed} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-          <input type="submit" />
+        <input type="submit" />
         </form>
       </div>
     );
