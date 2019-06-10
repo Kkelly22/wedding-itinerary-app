@@ -32,10 +32,11 @@ export const createPlan = plan => {
   return dispatch => {
     fetch(`users/${plan.user_id}/plans`, data)
       .then(response => response.json())
-      .then(plan => dispatch({
-        type: 'CREATE_PLAN',
-        payload: plan
-      }))
+      .then(plan => {
+        dispatch({
+              type: 'CREATE_PLAN',
+              payload: plan
+            })})
       .catch(err => err)
   }
 }
