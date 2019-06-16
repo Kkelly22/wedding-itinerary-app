@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './../../App.css';
 import Moment from 'react-moment';
 
-import VoteCount from './VoteCount.js';
-
 class Plan extends Component {
   state = {
     count: 0
@@ -24,10 +22,9 @@ class Plan extends Component {
         <td>{plan.vendor}</td>
         <td>{plan.location}</td>
         <td> <Moment parse="YYYY-MM-DD HH:mm">{plan.time}</Moment></td>
-        <td>{ plan.completed ? "Yes" : "No" }</td>
+        <td><button onClick={() => this.handleOnSubmit()}> {this.state.count % 2 === 0 ? "Complete" : "Finished"} </button></td>
         <td><button onClick={() => this.props.deletePlan(plan)}> X </button></td>
-        <td><button onClick={() => this.handleOnSubmit()}> V </button></td>
-        <VoteCount counter={this.state.count} />
+        
       </div>
     );
   }
