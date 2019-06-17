@@ -11,6 +11,8 @@ class WeddingInfo extends Component {
         Wedding Location: {this.props.user.wedding_location}
         <br />
         Wedding Date: <Moment parse="YYYY-MM-DD HH:mm">{this.props.user.wedding_date}</Moment> 
+        <br />
+        Wedding Code: {this.props.user.wedding_code}
       </div>
     );
   }
