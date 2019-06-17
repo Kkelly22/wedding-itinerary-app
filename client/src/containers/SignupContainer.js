@@ -14,7 +14,8 @@ class SignupContainer extends Component {
     groom: '',
     wedding_location: '',
     wedding_date: '',
-    wedding_code: ''
+    wedding_code: '',
+    bride_flag: false
   }
 
   handleOnChange(event) {
@@ -33,7 +34,8 @@ class SignupContainer extends Component {
       groom: '',
       wedding_location: '',
       wedding_date: '',
-      wedding_code: ''
+      wedding_code: '',
+      bride_flag: false
     });
   }
 
@@ -60,7 +62,12 @@ class SignupContainer extends Component {
            <label>Wedding Date</label>
           <input type="datetime-local" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
           <br />
-          <label>Wedding Code</label>
+
+          <label>Are You The Bride or Groom?</label>
+          <input type="radio" name="bride_flag" value={this.state.bride_flag} onChange={(event) => this.handleOnChange(event)} />
+          <br />
+
+          <label>Not The Bride or Groom? Enter Their Wedding Code Here</label>
           <input type="text" name="wedding_code" value={this.state.wedding_code} onChange={(event) => this.handleOnChange(event)} />
           <input type="submit" />
         </form>
