@@ -38,9 +38,6 @@ class LoginContainer extends Component {
           <label>Password</label>
           <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
           <br />
-          <label>Wedding Code</label>
-          <input type="text" name="wedding_code" value={this.state.wedding_code} onChange={(event) => this.handleOnChange(event)} />
-          <br />
           <input type="submit" />
         </form>
         <br />
