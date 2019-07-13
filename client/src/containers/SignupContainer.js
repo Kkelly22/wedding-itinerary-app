@@ -56,6 +56,7 @@ class SignupContainer extends Component {
     return (
       <div>
         <h1>Sign Up</h1>
+        <div id="signup-container">
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <label>Username</label>
           <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
@@ -87,6 +88,7 @@ class SignupContainer extends Component {
         </form>
         <br />
         <Link to='/login'>Log In</Link>
+        </div>
       </div>
     );
   }

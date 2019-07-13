@@ -3,6 +3,7 @@ import './App.css';
 import PlansContainer from './containers/PlansContainer';
 import Signup from './Signup';
 import Login from './Login';
+import love from './mandy-von-stahl-VDiGTEO0TYY-unsplash.jpg';
 
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
