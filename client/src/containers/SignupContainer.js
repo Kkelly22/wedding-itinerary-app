@@ -35,7 +35,6 @@ class SignupContainer extends Component {
         bride_flag: false
       });
     }
-    debugger;
   }
 
   handleOnSubmit(event) {
