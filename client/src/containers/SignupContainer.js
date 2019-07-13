@@ -24,6 +24,18 @@ class SignupContainer extends Component {
     });
   }
 
+  handleOnToggle(event) {
+    if (event.target.checked === true) {
+      this.setState({
+        bride_flag: true
+      });
+    } else {
+      this.setState({
+        bride_flag: false
+      });
+    }
+  }
+
   handleOnSubmit(event) {
     event.preventDefault();
     this.props.createUser(this.state, () => this.props.history.push('/'));
@@ -62,13 +74,14 @@ class SignupContainer extends Component {
            <label>Wedding Date</label>
           <input type="datetime-local" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
           <br />
-
-          <label>Are You The Bride or Groom?</label>
-          <input type="radio" name="bride_flag" value={this.state.bride_flag} onChange={(event) => this.handleOnChange(event)} />
           <br />
-
+          <label>Are You The Bride or Groom?</label>
+          <input type="radio" name="bride_flag" value="true" onChange={(event) => this.handleOnToggle(event)} />
+          <br />
+          <br />
           <label>Not The Bride or Groom? Enter Their Wedding Code Here</label>
           <input type="text" name="wedding_code" value={this.state.wedding_code} onChange={(event) => this.handleOnChange(event)} />
+          <br />
           <input type="submit" />
         </form>
         <br />
