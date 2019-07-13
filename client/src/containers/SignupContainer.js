@@ -27,13 +27,15 @@ class SignupContainer extends Component {
   handleOnToggle(event) {
     if (event.target.checked === true) {
       this.setState({
-        bride_flag: true
+        bride_flag: true,
+        wedding_code: Math.random().toString(36).substring(7),
       });
     } else {
       this.setState({
         bride_flag: false
       });
     }
+    debugger;
   }
 
   handleOnSubmit(event) {
@@ -79,7 +81,7 @@ class SignupContainer extends Component {
           <input type="radio" name="bride_flag" value="true" onChange={(event) => this.handleOnToggle(event)} />
           <br />
           <br />
-          <label>Not The Bride or Groom? Enter Their Wedding Code Here</label>
+          <label>Already Have the Bride and Groom Code? Enter Their Wedding Code Here</label>
           <input type="text" name="wedding_code" value={this.state.wedding_code} onChange={(event) => this.handleOnChange(event)} />
           <br />
           <input type="submit" />
