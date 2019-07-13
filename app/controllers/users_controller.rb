@@ -1,5 +1,22 @@
 class UsersController < ApplicationController
   def create
+    # binding.pry
+    # if !!user_params[:username] && !!user_params[:password] && !!user_params[:wedding_code] && user_params[:bride_flag] === false
+    #   binding.pry
+    #   sqlquery = "
+    #   SELECT TOP 1
+    #     id 
+    #   FROM
+    #     users
+    #   WHERE 
+    #     wedding_code LIKE " + user_params[:wedding_code] + "
+    #   ORDER BY 
+    #     id ASC;
+    #   "
+    #   results = ActiveRecord::Base.connection.execute(sqlquery)
+    #   binding.pry
+    # end
+
     user = User.create(user_params)
     if user && user.valid?
       render json: { current: user }
