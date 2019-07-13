@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
   def create
     user = User.create(user_params)
-    if params[:bride_flag] == true
-      user.update(params[:user_id], :wedding_code => (0...8).map { (65 + rand(26)).chr }.join)
-    end
-
     if user && user.valid?
       render json: { current: user }
     else
