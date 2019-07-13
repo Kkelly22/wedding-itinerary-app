@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Lora&display=swap');
+
 .plan-header th {
   width: 190px;
   overflow: hidden;
@@ -23,10 +25,10 @@
   width: 700px;
   padding: 15px;
   margin: 10px;
-  font-family: "Times New Roman", Times, serif;
-  font-style : italic ;
+  font-family: 'Dancing Script', cursive;
   font-size: 40px;
-  background-image: linear-gradient(#003366, #ffffff, #003366)
+  border: 1px solid black;
+  background: white;
 }
 
 .wedding-info {
@@ -50,6 +52,10 @@
 a {
   color: #0000b3;
   display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
 }
 
 
