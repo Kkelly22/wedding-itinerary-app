@@ -54,6 +54,7 @@ class SignupContainer extends Component {
 
   render() {
     return (
+      <div class="blur">
       <div class="content">
         <h1>Sign Up</h1>
         <div id="signup-container">
@@ -89,6 +90,7 @@ class SignupContainer extends Component {
         <br />
         <Link to='/login'>Log In</Link>
         </div>
+      </div>
       </div>
     );
   }
