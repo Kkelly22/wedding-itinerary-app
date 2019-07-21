@@ -54,9 +54,10 @@ class SignupContainer extends Component {
 
   render() {
     return (
-      <div class="blur">
       <div class="content">
         <h1>Sign Up</h1>
+        <div class="blur">
+        </div>
         <div id="signup-container">
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <label>Username</label>
@@ -90,7 +91,6 @@ class SignupContainer extends Component {
         <br />
         <Link to='/login'>Log In</Link>
         </div>
-      </div>
       </div>
     );
   }
