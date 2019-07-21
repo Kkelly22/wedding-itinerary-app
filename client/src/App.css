@@ -75,10 +75,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blur {
-  background:inherit;
-  filter: blur(8px);
-  overflow: hidden;
-  z-index: -1;
+  background: inherit;
+  filter: blur(20px);
+  height: 500px;
+  width: 500px;
+  top: 0;
+  left: 0;
+}
+
+.blur .content {
+  padding: 16px;
 }
 
 .App-header {
