@@ -29,7 +29,7 @@ class LoginContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div class="content">
         <h1>Log In</h1>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <label>Username</label>

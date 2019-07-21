@@ -54,7 +54,7 @@ class SignupContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div class="content">
         <h1>Sign Up</h1>
         <div id="signup-container">
         <form onSubmit={(event) => this.handleOnSubmit(event)}>

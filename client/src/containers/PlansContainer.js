@@ -18,7 +18,7 @@ class PlansContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div class="content">
         <UserInfo user={this.props.current}/>
         <br />
         <WeddingInfo user={this.props.current}/>
