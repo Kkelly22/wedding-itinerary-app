@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 .App {
     background-image: url(./mandy-von-stahl-VDiGTEO0TYY-unsplash.jpg);  height: 500px;
     text-align: center;
-    height: 1000px; 
+    height: 800px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,6 +95,29 @@ h1, h2, h3, h4, h5, h6 {
   top:25%;
   left:25%;
 }
+
+.login-blur {
+  background:white;
+  filter:blur(100px);
+  height: 400px;
+  width:50%;
+  margin: auto;
+  padding:10px;
+  position: absolute;
+  top:15%;
+  left:25%;
+}
+
+.login-container {
+  height: 500px;
+  width:50%;
+  margin: auto;
+  padding:10px;
+  position: absolute;
+  top:35%;
+  left:25%;
+}
+
 
 .App-header {
   background-color: #282c34;

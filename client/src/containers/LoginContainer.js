@@ -29,19 +29,23 @@ class LoginContainer extends Component {
 
   render() {
     return (
-      <div class="content">
+      <div>
         <h1>Log In</h1>
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <label>Username</label>
-          <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
+        <div class="login-blur">
+        </div>
+        <div class="login-container">
+          <form onSubmit={(event) => this.handleOnSubmit(event)}>
+            <label>Username</label>
+            <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <label>Password</label>
+            <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <input type="submit" />
+          </form>
           <br />
-          <label>Password</label>
-          <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-          <input type="submit" />
-        </form>
-        <br />
-        <Link to='/signup'>Sign Up</Link>
+          <Link to='/signup'>Sign Up</Link>
+        </div>
       </div>
     );
   }
