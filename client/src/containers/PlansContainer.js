@@ -18,16 +18,20 @@ class PlansContainer extends Component {
 
   render() {
     return (
-      <div class="content">
+      <div>
         <UserInfo user={this.props.current}/>
         <br />
         <WeddingInfo user={this.props.current}/>
-        <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} />
-        <PlanInput user={this.props.current}/>
-        <WeddingCountdown user={this.props.current} />
-        <br />
-        <br />
-        <Link to='/login'>Log Out</Link>
+        <div class="plans-blur">
+        </div>
+        <div class="plans-container">
+          <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} />
+          <PlanInput user={this.props.current}/>
+          <WeddingCountdown user={this.props.current} />
+          <br />
+          <br />
+          <Link to='/login'>Log Out</Link>
+        </div>
       </div>
     )
   }

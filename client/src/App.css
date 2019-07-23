@@ -118,6 +118,28 @@ h1, h2, h3, h4, h5, h6 {
   left:25%;
 }
 
+.plans-blur {
+  background:white;
+  filter:blur(100px);
+  height: 500px;
+  width:100%;
+  margin: auto;
+  padding:10px;
+  position: absolute;
+  top:30%;
+  left:0px;
+}
+
+.plans-container {
+  height: 500px;
+  width:100%;
+  margin: auto;
+  padding:10px;
+  position: absolute;
+  top:30%;
+  left:0px;
+}
+
 
 .App-header {
   background-color: #282c34;
