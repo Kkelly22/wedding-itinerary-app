@@ -54,42 +54,42 @@ class SignupContainer extends Component {
 
   render() {
     return (
-      <div class="content">
+      <div>
         <h1>Sign Up</h1>
-        <div class="blur">
+        <div class="signup-blur">
         </div>
-        <div id="signup-container">
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <label>Username</label>
-          <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
+        <div class="signup-container">
+          <form onSubmit={(event) => this.handleOnSubmit(event)}>
+            <label>Username</label>
+            <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <label>Password</label>
+            <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <label>Brides Name</label>
+            <input type="text" name="bride" value={this.state.bride} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <label>Grooms Name</label>
+            <input type="text" name="groom" value={this.state.groom} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <label>Wedding Location</label>
+            <input type="text" name="wedding_location" value={this.state.wedding_location} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+             <label>Wedding Date</label>
+            <input type="datetime-local" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <br />
+            <label>Are You The Bride or Groom?</label>
+            <input type="radio" name="bride_flag" value="true" onChange={(event) => this.handleOnToggle(event)} />
+            <br />
+            <br />
+            <label>Already Have the Bride and Groom Code? Enter Their Wedding Code Here</label>
+            <input type="text" name="wedding_code" value={this.state.wedding_code} onChange={(event) => this.handleOnChange(event)} />
+            <br />
+            <input type="submit" />
+          </form>
           <br />
-          <label>Password</label>
-          <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-          <label>Brides Name</label>
-          <input type="text" name="bride" value={this.state.bride} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-          <label>Grooms Name</label>
-          <input type="text" name="groom" value={this.state.groom} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-          <label>Wedding Location</label>
-          <input type="text" name="wedding_location" value={this.state.wedding_location} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-           <label>Wedding Date</label>
-          <input type="datetime-local" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-          <br />
-          <label>Are You The Bride or Groom?</label>
-          <input type="radio" name="bride_flag" value="true" onChange={(event) => this.handleOnToggle(event)} />
-          <br />
-          <br />
-          <label>Already Have the Bride and Groom Code? Enter Their Wedding Code Here</label>
-          <input type="text" name="wedding_code" value={this.state.wedding_code} onChange={(event) => this.handleOnChange(event)} />
-          <br />
-          <input type="submit" />
-        </form>
-        <br />
-        <Link to='/login'>Log In</Link>
+          <Link to='/login'>Log In</Link>
         </div>
       </div>
     );

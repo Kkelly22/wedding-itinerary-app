@@ -60,8 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .App {
+    background-image: url(./mandy-von-stahl-VDiGTEO0TYY-unsplash.jpg);  height: 500px;
     text-align: center;
-    background-image: url(./mandy-von-stahl-VDiGTEO0TYY-unsplash.jpg);
     height: 1000px; 
     background-position: center;
     background-repeat: no-repeat;
@@ -74,15 +74,26 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
-.blur {
-  height: 300px;
-  width:300px;
-  padding:100px;
-  overflow: hidden;
-  background:inherit;
-  position:absolute;
-  opacity: .5;
-  position:center;
+.signup-blur {
+  background:white;
+  filter:blur(100px);
+  height: 400px;
+  width:50%;
+  margin: auto;
+  padding:10px;
+  position: absolute;
+  top:15%;
+  left:25%;
+}
+
+.signup-container {
+  height: 500px;
+  width:50%;
+  margin: auto;
+  padding:10px;
+  position: absolute;
+  top:25%;
+  left:25%;
 }
 
 .App-header {
