@@ -1,31 +1,32 @@
 class UsersController < ApplicationController
-  def create
+  def create 
+    user = User.create(user_params)
+    if user && user.valid?
+      render json: { current: user }
+    else
+      render json: { error: 'Failed to Sign Up' }, status: 400
+    end
+  end
+
+  def find
     login_id = 0
-    if user_params[:wedding_code] != "" && user_params[:bride_flag] === false
-      e = ActiveRecord::Base.establish_connection
-      c = e.connection
-      rows = c.execute('select id, wedding_code from users')
-      rows.each do |row|
-        if row["wedding_code"] == user_params[:wedding_code]
-          login_id = row["id"]
-        end
+    e = ActiveRecord::Base.establish_connection
+    c = e.connection
+    rows = c.execute('select id, wedding_code from users')
+    rows.each do |row|
+      if row["wedding_code"] == params[:wedding_code]
+        login_id = row["id"]
       end
     end
-
-    if user_params[:wedding_code] != "" && user_params[:bride_flag] === false && login_id != 0
+    if login_id != 0
       user = User.find_by(id: login_id)
       if user
         render json: { current: user }
       else
-        render json: { error: 'Failed to Sign Up' }, status: 400
+        render json: { error: 'Failed to Find Wedding' }, status: 400
       end
-    else  
-      user = User.create(user_params)
-      if user && user.valid?
-        render json: { current: user }
-      else
-        render json: { error: 'Failed to Sign Up' }, status: 400
-      end
+    else
+        render json: { error: 'Failed to Find Wedding' }, status: 400
     end
   end
 

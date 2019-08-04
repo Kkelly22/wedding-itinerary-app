@@ -25,6 +25,33 @@ export const loginUser = (user, callback) => {
 }
 
 
+export const FindUser = (user, callback) => {
+  let data = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    
+  }
+  
+  return dispatch => {
+    debugger
+    fetch(`find`, data)
+      .then(response => response.json())
+      .then(user => {
+        dispatch({
+          type: 'SET_USER',
+          payload: user.current
+        })
+
+        callback()
+      })
+      .catch(err => alert("Incorrect Username/Password")) 
+  }
+}
+
+
 
 export const createUser = (user, callback) => {
   let data = {
