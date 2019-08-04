@@ -11,17 +11,21 @@ class UsersController < ApplicationController
         end
       end
     end
-    binding.pry
+
     if user_params[:wedding_code] != "" && user_params[:bride_flag] === false && login_id != 0
-      user = User.find_by(id: login_id)  
+      user = User.find_by(id: login_id)
+      if user
+        render json: { current: user }
+      else
+        render json: { error: 'Failed to Sign Up' }, status: 400
+      end
     else  
       user = User.create(user_params)
-    end
-
-    if user && user.valid?
-      render json: { current: user }
-    else
-      render json: { error: 'Failed to Sign Up' }, status: 400
+      if user && user.valid?
+        render json: { current: user }
+      else
+        render json: { error: 'Failed to Sign Up' }, status: 400
+      end
     end
   end
 
