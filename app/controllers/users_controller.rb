@@ -1,17 +1,23 @@
 class UsersController < ApplicationController
   def create
-    binding.pry
+    login_id = 0
     if user_params[:wedding_code] != "" && user_params[:bride_flag] === false
-      binding.pry
-      sqlquery = 'SELECT TOP 1 id FROM users WHERE wedding_code LIKE '  + user_params[:wedding_code] + 'ORDER BY id ASC;'
-      binding.pry
       e = ActiveRecord::Base.establish_connection
       c = e.connection
-      c.execute(sqlquery)
-      binding.pry
+      rows = c.execute('select id, wedding_code from users')
+      rows.each do |row|
+        if row["wedding_code"] == user_params[:wedding_code]
+          login_id = row["id"]
+        end
+      end
+    end
+    binding.pry
+    if user_params[:wedding_code] != "" && user_params[:bride_flag] === false && login_id != 0
+      user = User.find_by(id: login_id)  
+    else  
+      user = User.create(user_params)
     end
 
-    user = User.create(user_params)
     if user && user.valid?
       render json: { current: user }
     else
