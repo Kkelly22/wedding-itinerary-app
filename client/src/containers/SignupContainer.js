@@ -90,6 +90,7 @@ class SignupContainer extends Component {
           </form>
           <br />
           <Link to='/login'>Log In</Link>
+          <Link to='/find'>Find Wedding</Link>
         </div>
       </div>
     );

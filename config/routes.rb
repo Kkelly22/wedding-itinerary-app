@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
    get 'user', to: 'users#show', as: 'user_show'
+   get 'find', to: 'users#find', as: 'user_find'
    post 'signup', to: 'users#create', as: 'user_signup'
    get 'login', to: 'users#login', as: 'user_login'
    get 'logout', to: 'users#logout', as: 'user_logout'
