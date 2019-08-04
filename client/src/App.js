@@ -3,6 +3,7 @@ import './App.css';
 import PlansContainer from './containers/PlansContainer';
 import Signup from './Signup';
 import Login from './Login';
+import FindWedding from './containers/FindContainer';
 import love from './mandy-von-stahl-VDiGTEO0TYY-unsplash.jpg';
 
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -17,6 +18,7 @@ function App() {
 	      <Route exact path='/signup' render={Signup} />
 	      <Route exact path='/login' render={Login} />
 	      <Route exact path='/logout' render={Login} />
+        <Route exact path='/find' render={FindWedding} />
     	</Switch>
   	  </Router>
     </div>
