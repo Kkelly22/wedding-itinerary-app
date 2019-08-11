@@ -36,8 +36,7 @@ export const FindUser = (user, callback) => {
   }
   
   return dispatch => {
-    debugger
-    fetch(`find`, data)
+    fetch(`find?wedding_code=${encodeURIComponent(user.wedding_code)}`, data)
       .then(response => response.json())
       .then(user => {
         dispatch({
