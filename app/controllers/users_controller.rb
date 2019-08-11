@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def create 
     user = User.create(user_params)
     if user && user.valid?
+      UserMailer.with(user: user).welcome_email.deliver_now
       render json: { current: user }
     else
       render json: { error: 'Failed to Sign Up' }, status: 400
