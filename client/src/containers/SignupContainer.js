@@ -15,7 +15,7 @@ class SignupContainer extends Component {
     wedding_location: '',
     wedding_date: '',
     wedding_code: '',
-    bride_flag: false
+    email: ''
   }
 
   handleOnChange(event) {
@@ -24,21 +24,11 @@ class SignupContainer extends Component {
     });
   }
 
-  handleOnToggle(event) {
-    if (event.target.checked === true) {
-      this.setState({
-        bride_flag: true,
-        wedding_code: Math.random().toString(36).substring(7),
-      });
-    } else {
-      this.setState({
-        bride_flag: false
-      });
-    }
-  }
-
   handleOnSubmit(event) {
     event.preventDefault();
+    this.setState({
+      wedding_code: Math.random().toString(36).substring(7),
+    });
     this.props.createUser(this.state, () => this.props.history.push('/'));
     this.setState({
       username: '',
@@ -48,7 +38,7 @@ class SignupContainer extends Component {
       wedding_location: '',
       wedding_date: '',
       wedding_code: '',
-      bride_flag: false
+      email: ''
     });
   }
 
@@ -66,6 +56,9 @@ class SignupContainer extends Component {
             <label>Password</label>
             <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
             <br />
+            <label>Email</label>
+            <input type="text" name="email" value={this.state.email} onChange={(event) => this.handleOnChange(event)} />
+            <br />
             <label>Brides Name</label>
             <input type="text" name="bride" value={this.state.bride} onChange={(event) => this.handleOnChange(event)} />
             <br />
@@ -79,13 +72,7 @@ class SignupContainer extends Component {
             <input type="datetime-local" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
             <br />
             <br />
-            <label>Are You The Bride or Groom?</label>
-            <input type="radio" name="bride_flag" value="true" onChange={(event) => this.handleOnToggle(event)} />
-            <br />
-            <br />
-            <label>Already Have the Bride and Groom Code? Enter Their Wedding Code Here</label>
-            <input type="text" name="wedding_code" value={this.state.wedding_code} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+           
             <input type="submit" />
           </form>
           <br />
