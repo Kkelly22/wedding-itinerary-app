@@ -21,14 +21,12 @@ class SignupContainer extends Component {
   handleOnChange(event) {
     this.setState({
       [event.target.name]: event.target.value,
+      wedding_code: Math.random().toString(36).substring(7),
     });
   }
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.setState({
-      wedding_code: Math.random().toString(36).substring(7),
-    });
     this.props.createUser(this.state, () => this.props.history.push('/'));
     this.setState({
       username: '',
