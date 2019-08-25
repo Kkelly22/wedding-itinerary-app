@@ -24,6 +24,7 @@ class Plan extends Component {
         <td> <Moment parse="YYYY-MM-DD HH:mm">{plan.time}</Moment></td>
         <td><button onClick={() => this.handleOnSubmit()}> {this.state.count % 2 === 0 ? "Complete" : "Finished"} </button></td>
         <td><button onClick={() => this.props.deletePlan(plan)}> X </button></td>
+        <td><button onClick={() => this.props.updatePlan(plan)}> X </button></td>
         
       </div>
     );

@@ -4,7 +4,7 @@ import './../../App.css';
 
 class Plans extends Component {
   render(){
-  	const plans = !!this.props.plans ? this.props.plans.map(plan => <Plan key={plan.id} plan={plan} deletePlan={this.props.deletePlan}/>) : []
+  	const plans = !!this.props.plans ? this.props.plans.map(plan => <Plan key={plan.id} plan={plan} deletePlan={this.props.deletePlan} updatePlan={this.props.updatePlan}/>) : []
   return (
     <div className="plan-header">
     <h2>Wedding Day Itinerary</h2>
@@ -17,6 +17,7 @@ class Plans extends Component {
             <th>Time</th>
             <th>Completed?</th>
             <th>Delete</th>
+            <th>Edit</th>
           </tr>
         </thead>
 

@@ -8,7 +8,7 @@ import Plans from '../components/plans/Plans'
 import UserInfo from '../components/users/UserInfo'
 import WeddingInfo from '../components/users/WeddingInfo'
 import WeddingCountdown from '../components/plans/WeddingCountdown'
-import { fetchPlans, deletePlan } from '../actions/planActions'
+import { fetchPlans, deletePlan, updatePlan } from '../actions/planActions'
 
 class PlansContainer extends Component {
   
@@ -25,7 +25,7 @@ class PlansContainer extends Component {
         <div class="plans-blur">
         </div>
         <div class="plans-container">
-          <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} />
+          <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} updatePlan={this.props.updatePlan} />
           <PlanInput user={this.props.current}/>
           <WeddingCountdown user={this.props.current} />
           <br />
@@ -45,6 +45,7 @@ const mapStateToProps =  state  => ({
 const mapDispatchToProps = dispatch => bindActionCreators({
   fetchPlans,
   deletePlan,
+  updatePlan,
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlansContainer)
