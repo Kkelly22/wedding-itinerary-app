@@ -73,6 +73,6 @@ export const createUser = (user, callback) => {
 
         callback()
       })
-      .catch(err => alert("Username/Password Already Exist!"))
+      .catch(err => alert("Failed To Create User"))
   }
 }
