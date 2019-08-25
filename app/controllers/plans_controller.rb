@@ -12,6 +12,11 @@ class PlansController < ApplicationController
 		render json: @plan, status: 201
 	end
 
+	def show
+		@plan = Plan.find_by(id: params[:id])
+		render json: @plan, status: 201
+	end
+
 	def update
 		@plan = Plan.find_by(id: params[:id])
 		@plan.update(plan_params)
