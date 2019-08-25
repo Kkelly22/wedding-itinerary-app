@@ -60,3 +60,23 @@ export const deletePlan = plan => {
       .catch(err => err)
   }
 }
+
+export const updatePlan = plan => {
+  let data = {
+    method: 'UPDATE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }
+
+  return dispatch => {
+    fetch(`users/${plan.user_id}/plans/${plan.id}`, data)
+      .then(response => response.json())
+      .then(plan => dispatch({
+        type: 'UPDATE_PLAN',
+        payload: plan
+      }))
+      .catch(err => err)
+  }
+}
