@@ -80,3 +80,24 @@ export const updatePlan = plan => {
       .catch(err => err)
   }
 }
+
+
+export const fetchPlan = (plan) => {
+  let data = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }
+
+  return dispatch => {
+    fetch(`users/${plan.user_id}/plans/${plan.id}`, data)
+      .then(response => response.json())
+      .then(plans => dispatch({
+          type: 'FETCH_PLAN',
+          payload: plan
+      }))
+      .catch(err => err)
+  }
+}
