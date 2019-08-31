@@ -17,15 +17,17 @@ class PlanInput extends Component {
 
   constructor(props) {
     super(props);
+  }
+
+  checkUpdateState() {
     this.state = {
-      description: props.plan.length == 0 ? "" : props.plan.description,
-      vendor: props.plan.length == 0 ? "" : props.plan.vendor,
-      location: props.plan.length == 0 ? "" : props.plan.location,
-      time: props.plan.length == 0 ? "" : props.plan.time,
-      completed: props.plan.length == 0 ? false : props.plan.completed,
-      user_id: props.plan.length == 0 ? 0 : props.plan.user_id
+      description: this.props.plan.length == 0 ? "" : this.props.plan.description,
+      vendor: this.props.plan.length == 0 ? "" : this.props.plan.vendor,
+      location: this.props.plan.length == 0 ? "" : this.props.plan.location,
+      time: this.props.plan.length == 0 ? "" : this.props.plan.time,
+      completed: this.props.plan.length == 0 ? false : this.props.plan.completed,
+      user_id: this.props.plan.length == 0 ? 0 : this.props.plan.user_id
     }
-    console.log(this.state)
   }
 
   handleOnChange(event) {
@@ -59,6 +61,9 @@ class PlanInput extends Component {
   }
 
   render() {
+    const plan = !!this.props.plan ? this.props.plan : []
+    this.checkUpdateState(plan)
+
     return (
       <div className="plan-input">
       <h3>Add to the Itinerary:</h3>
