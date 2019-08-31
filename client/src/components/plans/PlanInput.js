@@ -24,7 +24,7 @@ class PlanInput extends Component {
       description: this.props.plan.length == 0 ? "" : this.props.plan.description,
       vendor: this.props.plan.length == 0 ? "" : this.props.plan.vendor,
       location: this.props.plan.length == 0 ? "" : this.props.plan.location,
-      time: this.props.plan.length == 0 ? "" : this.props.plan.time,
+      time: this.props.plan.length == 0 ? "" : this.props.plan.time.replace("Z",""),
       completed: this.props.plan.length == 0 ? false : this.props.plan.completed,
       user_id: this.props.plan.length == 0 ? 0 : this.props.plan.user_id
     }
