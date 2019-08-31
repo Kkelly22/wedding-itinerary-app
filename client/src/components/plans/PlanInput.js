@@ -58,7 +58,7 @@ class PlanInput extends Component {
     if (this.props.plan.length == 0) {
        this.props.createPlan({...this.state, user_id: this.props.user.id});
     } else {
-      this.props.updatePlan({...this.state});
+      this.props.updatePlan({...this.state, id: this.props.plan.id});
     }
    
     this.setState({
@@ -72,6 +72,7 @@ class PlanInput extends Component {
   }
 
   render() {
+    debugger
     const plan = !!this.props.plan ? this.props.plan : []
 
     return (
