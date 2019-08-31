@@ -19,16 +19,27 @@ class PlanInput extends Component {
     super(props);
   }
 
-  checkUpdateState() {
-    this.state = {
-      description: this.props.plan.length == 0 ? "" : this.props.plan.description,
-      vendor: this.props.plan.length == 0 ? "" : this.props.plan.vendor,
-      location: this.props.plan.length == 0 ? "" : this.props.plan.location,
-      time: this.props.plan.length == 0 ? "" : this.props.plan.time.replace("Z",""),
-      completed: this.props.plan.length == 0 ? false : this.props.plan.completed,
-      user_id: this.props.plan.length == 0 ? 0 : this.props.plan.user_id
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.plan.description !== this.state.description) {
+      this.setState({ description: nextProps.plan.description });
+    }
+    if (nextProps.plan.vendor !== this.state.vendor) {
+      this.setState({ vendor: nextProps.plan.vendor });
+    }
+    if (nextProps.plan.location !== this.state.location) {
+      this.setState({ location: nextProps.plan.location });
+    }
+    if (nextProps.plan.time !== this.state.time) {
+      this.setState({ time: nextProps.plan.time.replace("Z","") });
+    }
+    if (nextProps.plan.completed !== this.state.completed) {
+      this.setState({ completed: nextProps.plan.completed });
+    }
+    if (nextProps.plan.user_id !== this.state.user_id) {
+      this.setState({ user_id: nextProps.plan.user_id });
     }
   }
+
 
   handleOnChange(event) {
     if (event.target.name === "completed") {
@@ -62,7 +73,6 @@ class PlanInput extends Component {
 
   render() {
     const plan = !!this.props.plan ? this.props.plan : []
-    this.checkUpdateState(plan)
 
     return (
       <div className="plan-input">
