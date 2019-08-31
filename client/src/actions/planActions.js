@@ -62,8 +62,9 @@ export const deletePlan = plan => {
 }
 
 export const updatePlan = plan => {
+  debugger
   let data = {
-    method: 'UPDATE',
+    method: 'PATCH',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
