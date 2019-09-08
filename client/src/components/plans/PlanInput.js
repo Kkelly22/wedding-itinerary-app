@@ -72,7 +72,6 @@ class PlanInput extends Component {
   }
 
   render() {
-    debugger
     const plan = !!this.props.plan ? this.props.plan : []
 
     return (
