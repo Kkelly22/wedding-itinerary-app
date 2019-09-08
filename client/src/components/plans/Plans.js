@@ -15,9 +15,7 @@ class Plans extends Component {
             <th>Vendor</th>
             <th>Location</th>
             <th>Time</th>
-            <th>Completed?</th>
-            <th>Delete</th>
-            <th>Edit</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
