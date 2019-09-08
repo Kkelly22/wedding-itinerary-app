@@ -62,22 +62,23 @@ export const deletePlan = plan => {
 }
 
 export const updatePlan = plan => {
-  debugger
   let data = {
     method: 'PATCH',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
-    }
+    },
+    body: JSON.stringify({ plan })
   }
-
+  
   return dispatch => {
     fetch(`users/${plan.user_id}/plans/${plan.id}`, data)
       .then(response => response.json())
-      .then(plan => dispatch({
-        type: 'UPDATE_PLAN',
-        payload: plan
-      }))
+      .then(plan => {
+        dispatch({
+              type: 'UPDATE_PLAN',
+              payload: plan
+            })})
       .catch(err => err)
   }
 }
