@@ -29,7 +29,7 @@ class PlanInput extends Component {
     if (nextProps.plan.location !== this.state.location) {
       this.setState({ location: nextProps.plan.location });
     }
-    if (nextProps.plan.time !== this.state.time) {
+    if (nextProps.plan.time !== this.state.time && !!nextProps.plan.time == true) {
       this.setState({ time: nextProps.plan.time.replace("Z","") });
     }
     if (nextProps.plan.completed !== this.state.completed) {
@@ -55,7 +55,7 @@ class PlanInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    if (this.props.plan.length == 0) {
+    if (this.props.plan == {}) {
        this.props.createPlan({...this.state, user_id: this.props.user.id});
     } else {
       this.props.updatePlan({...this.state, id: this.props.plan.id});
