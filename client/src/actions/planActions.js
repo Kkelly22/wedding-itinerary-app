@@ -79,6 +79,11 @@ export const updatePlan = plan => {
               type: 'UPDATE_PLAN',
               payload: plan
             })})
+      .then(plan => {
+        dispatch({
+              type: 'FETCH_PLAN',
+              payload: {}
+            })})
       .catch(err => err)
   }
 }
