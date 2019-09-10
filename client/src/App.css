@@ -50,8 +50,10 @@
 }
 
 a {
-  color: #0000b3;
+  color: black;
   display: block;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
 }
 
 h1, h2, h3, h4, h5, h6 {
