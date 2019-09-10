@@ -29,7 +29,7 @@ class FindContainer extends Component {
     return (
       <div>
         <h1>Find Wedding</h1>
-        <div class="login-blur">
+        <div>
         </div>
         <div class="login-container">
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
