@@ -55,10 +55,10 @@ class PlanInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    if (this.props.plan == {}) {
-       this.props.createPlan({...this.state, user_id: this.props.user.id});
-    } else {
+    if (!!this.props.plan.id) {
       this.props.updatePlan({...this.state, id: this.props.plan.id});
+    } else {
+      this.props.createPlan({...this.state, user_id: this.props.user.id});
     }
    
     this.setState({
