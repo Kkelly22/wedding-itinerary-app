@@ -44,7 +44,7 @@ class SignupContainer extends Component {
     return (
       <div>
         <h1>Sign Up</h1>
-        <div class="signup-blur">
+        <div>
         </div>
         <div class="signup-container">
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
