@@ -31,7 +31,7 @@ class LoginContainer extends Component {
     return (
       <div>
         <h1>Log In</h1>
-        <div class="login-blur">
+        <div>
         </div>
         <div class="login-container">
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
