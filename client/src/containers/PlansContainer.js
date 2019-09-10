@@ -22,7 +22,7 @@ class PlansContainer extends Component {
         <UserInfo user={this.props.current}/>
         <br />
         <WeddingInfo user={this.props.current}/>
-        <div>
+        <div class="plans-blur">
         </div>
         <div class="plans-container">
           <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} fetchPlan={this.props.fetchPlan} />
