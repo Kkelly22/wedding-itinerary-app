@@ -60,6 +60,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif;
 }
 
+form  { display: table;      
+}
+p     { display: table-row;  
+}
+label { display: table-cell; 
+}
+input { display: table-cell; 
+}
+
 
 .App {
     box-shadow: inset 0px 50.00vh 0px #ffcce6, inset 0px 53.33vh 0px grey, inset 0px 99.99vh 0px white;
