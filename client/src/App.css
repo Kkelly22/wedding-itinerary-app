@@ -60,13 +60,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif;
 }
 
-form  { display: table;      
+form  { 
+  display: table;
+  padding-left: 35%;
 }
-p     { display: table-row;  
+p     { 
+  display: table-row;  
 }
-label { display: table-cell; 
+label { 
+  display: table-cell; 
 }
-input { display: table-cell; 
+input { 
+  display: table-cell; 
 }
 
 
