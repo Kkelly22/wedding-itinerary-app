@@ -78,18 +78,26 @@ class PlanInput extends Component {
       <div className="plan-input">
       <h3>Add to the Itinerary:</h3>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
+          <p>
           <label>Plan Description</label>
           <input type="text" name="description" value={this.state.description} onChange={(event) => this.handleOnChange(event)} />
-          <br />
+          </p>
+
+          <p>
           <label>Plan Vendor</label>
           <input type="text" name="vendor" value={this.state.vendor} onChange={(event) => this.handleOnChange(event)} />
-          <br />
+          </p>
+
+          <p>
           <label>Plan Location</label>
           <input type="text" name="location" value={this.state.location} onChange={(event) => this.handleOnChange(event)} />
-          <br />
+          </p>
+
+          <p>
           <label>Plan Time</label>
           <input type="datetime-local" name="time" value={this.state.time} onChange={(event) => this.handleOnChange(event)} />
-          <br />
+          </p>
+          
         <input type="submit" />
         </form>
       </div>
