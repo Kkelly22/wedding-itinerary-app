@@ -35,12 +35,18 @@ class LoginContainer extends Component {
         </div>
         <div class="login-container">
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
+          
+            <p>
             <label>Username</label>
             <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
             <br />
+            </p>
+
+            <p>
             <label>Password</label>
             <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+            </p>
+
             <input type="submit" />
           </form>
           <br />
