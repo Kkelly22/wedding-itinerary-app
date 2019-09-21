@@ -48,29 +48,42 @@ class SignupContainer extends Component {
         </div>
         <div class="signup-container">
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
+
+            <p>
             <label>Username</label>
             <input type="text" name="username" value={this.state.username} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+            </p>
+
+            <p>
             <label>Password</label>
             <input type="text" name="password" value={this.state.password} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+            </p>
+
+            <p>
             <label>Email</label>
             <input type="text" name="email" value={this.state.email} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+            </p>
+
+            <p>
             <label>Brides Name</label>
             <input type="text" name="bride" value={this.state.bride} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+            </p>
+      
+            <p>
             <label>Grooms Name</label>
             <input type="text" name="groom" value={this.state.groom} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+            </p>
+
+            <p>
             <label>Wedding Location</label>
             <input type="text" name="wedding_location" value={this.state.wedding_location} onChange={(event) => this.handleOnChange(event)} />
-            <br />
+            </p>
+
+            <p>
              <label>Wedding Date</label>
             <input type="datetime-local" name="wedding_date" value={this.state.wedding_date} onChange={(event) => this.handleOnChange(event)} />
-            <br />
-            <br />
-           
+            </p>
+
             <input type="submit" />
           </form>
           <br />
