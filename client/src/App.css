@@ -31,7 +31,7 @@
 
 .wedding-info {
   display: inline-block;
-  background-color: #e0e0eb;
+  background-color: #B0C4DE;
   text-align: center;
   width: 400px;
   padding: 15px;
@@ -39,7 +39,7 @@
 
 .countdown-info {
   display: inline-block;
-  background-color: #e0e0eb;
+  background-color: #B0C4DE;
   text-align: center;
   width: 400px;
   padding: 15px;
@@ -80,7 +80,7 @@ input {
 
 
 .App {
-    box-shadow: inset 0px 50.00vh 0px #ffcce6, inset 0px 53.33vh 0px grey, inset 0px 99.99vh 0px white;
+    box-shadow: inset 0px 50.00vh 0px #ffcce6, inset 0px 53.33vh 0px #B0C4DE, inset 0px 99.99vh 0px white;
     height: 100vh;
     width: 100vw;
     text-align: center;
