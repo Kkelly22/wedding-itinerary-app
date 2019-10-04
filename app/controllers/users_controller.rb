@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     user = User.create(user_params)
     if user && user.valid?
       UserMailer.with(user: user).welcome_email.deliver_now
-      render json: { current: user }
+      render json: { current: user }, status: 201
     else
       render json: { error: 'Failed to Sign Up' }, status: 400
     end
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if login_id != 0
       user = User.find_by(id: login_id)
       if user
-        render json: { current: user }
+        render json: { current: user }, status: 200
       else
         render json: { error: 'Failed to Find Wedding' }, status: 400
       end
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def login
     user = User.find_by(username: params[:user])
     if user && user.authenticate(params[:password])
-      render json: { current: user }
+      render json: { current: user } , status: 200
     else
       render json: { error: 'Failed to Log In' }, status: 400
     end
