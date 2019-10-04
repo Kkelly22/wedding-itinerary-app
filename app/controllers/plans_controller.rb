@@ -2,7 +2,7 @@ class PlansController < ApplicationController
 	def index
 		@user = User.find_by(id: params[:user_id])
 		@plans = @user.plans.all
-		render json: @plans 
+		render json: @plans, status: 200
     end
 
 	def create
@@ -14,19 +14,19 @@ class PlansController < ApplicationController
 
 	def show
 		@plan = Plan.find_by(id: params[:id])
-		render json: @plan, status: 201
+		render json: @plan, status: 200
 	end
 
 	def update
 		@plan = Plan.find_by(id: params[:id])
 		@plan.update(plan_params)
-		render json: @plan, status: 201
+		render json: @plan, status: 200
 	end
 
 	def destroy
 		@plan = Plan.find_by(id: params[:id])
 		@plan.destroy
-		render json: @plan, status: 201
+		render json: @plan, status: 200
 	end
 
 	private
