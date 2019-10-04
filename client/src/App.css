@@ -45,6 +45,14 @@
   padding: 15px;
 }
 
+tr td:nth-child(odd) {
+  background: grey;
+}
+
+tr td:nth-child(even) {
+  background: white;
+}
+
 a {
   color: black;
   display: block;
