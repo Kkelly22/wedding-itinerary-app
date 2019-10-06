@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Lora&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Corben|Nobile&display=swap');
+
 
 .plan-header th {
   width: 190px;
@@ -24,7 +25,7 @@
   width: 700px;
   padding: 15px;
   margin: 10px;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Corben', cursive;
   font-size: 40px;
   background: white;
 }
@@ -56,21 +57,29 @@ tr td:nth-child(even) {
 a {
   color: black;
   display: block;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Corben';
   font-size: 25px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lora', serif;
+ font-family: 'Corben', Georgia, Times, serif;
+ font-size: 40px;
+ line-height: 55px;
+}
+
+p {
+ font-family: 'Nobile', Helvetica, Arial, sans-serif;
+ font-size: 13px;
+ line-height: 25px;
+ display: table-row;  
+
 }
 
 form  { 
   display: table;
   padding-left: 35%;
 }
-p     { 
-  display: table-row;  
-}
+
 label { 
   display: table-cell; 
 }
@@ -80,7 +89,7 @@ input {
 
 
 .App {
-    box-shadow: inset 0px 50.00vh 0px #ffcce6, inset 0px 53.33vh 0px #B0C4DE, inset 0px 99.99vh 0px white;
+    background-image: url("papyrus.png");
     height: 100vh;
     width: 100vw;
     text-align: center;
