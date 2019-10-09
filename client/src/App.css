@@ -151,7 +151,9 @@ body {
 }
 
 .signup-container {
-  height: 500px;
+  background: white;
+  box-shadow: 3px 3px 3px 3px #888888;
+  height: 350px;
   width:50%;
   margin: auto;
   padding:10px;
@@ -173,13 +175,15 @@ body {
 }
 
 .login-container {
-  height: 500px;
-  width:50%;
+  background: white;
+  box-shadow: 3px 3px 3px 3px #888888;
+  height: 200px;
+  width:30%;
   margin: auto;
   padding:10px;
   position: absolute;
   top:15%;
-  left:25%;
+  left:35%;
 }
 
 .plans-blur {
