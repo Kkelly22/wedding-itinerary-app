@@ -1,50 +1,5 @@
+/* CSS applied to generic attributes */
 @import url('https://fonts.googleapis.com/css?family=Corben|Nobile&display=swap');
-
-
-.plan-header th {
-  width: 190px;
-  overflow: hidden;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.plan-data td {
-  width: 190px;
-  overflow: hidden;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.plan-input {
-  padding: 20px;
-}
-
-.user-info {
-  display: inline-block;
-  text-align: center;
-  width: 700px;
-  padding: 15px;
-  margin: 10px;
-  font-family: 'Corben', cursive;
-  font-size: 40px;
-  background: white;
-}
-
-.wedding-info {
-  display: inline-block;
-  background-color: #B0C4DE;
-  text-align: center;
-  width: 400px;
-  padding: 15px;
-}
-
-.countdown-info {
-  display: inline-block;
-  background-color: #B0C4DE;
-  text-align: center;
-  width: 400px;
-  padding: 15px;
-}
 
 tr td:nth-child(odd) {
   background: grey;
@@ -87,24 +42,98 @@ input {
   display: table-cell; 
 }
 
-
-.App {
-    background-image: url("papyrus.png");
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    margin: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  height: 100%;
+  background-repeat: repeat;
+  background-image: url("tiny-squares.png");
 }
 
-.App-logo {
+
+
+
+/* CSS applied to App as a whole */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
 
+
+
+
+/* CSS applied to Plans */
+.plan-header th {
+  width: 190px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.plan-data td {
+  width: 190px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.plan-input {
+  padding: 20px;
+}
+
+
+
+/* CSS applied to Display Boxes */
+.user-info {
+  display: inline-block;
+  text-align: center;
+  width: 700px;
+  padding: 15px;
+  margin: 10px;
+  font-family: 'Corben', cursive;
+  font-size: 40px;
+  background: white;
+}
+
+.wedding-info {
+  display: inline-block;
+  background-color: #B0C4DE;
+  text-align: center;
+  width: 400px;
+  padding: 15px;
+}
+
+.countdown-info {
+  display: inline-block;
+  background-color: #B0C4DE;
+  text-align: center;
+  width: 400px;
+  padding: 15px;
+}
+
+
+/* CSS applied to Main Divs of Signup/Login/Plans */
 .signup-blur {
   background:white;
   filter:blur(100px);
@@ -172,22 +201,9 @@ input {
 }
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 
+/* Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
