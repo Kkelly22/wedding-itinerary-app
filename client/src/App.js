@@ -20,6 +20,7 @@ function App() {
         <Route exact path='/find' render={FindWedding} />
     	</Switch>
   	  </Router>
+      <div className="heart-animation"><i class="far fa-heart"></i></div>
     </div>
   );
 }
