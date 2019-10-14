@@ -50,8 +50,18 @@ class LoginContainer extends Component {
             <input type="submit" />
           </form>
           <br />
-          <Link to='/signup'>Sign Up</Link>
-          <Link to='/find'>Find Wedding</Link>
+
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bars"></i>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <Link class="dropdown-item" to='/signup'>Sign Up</Link>
+              <Link class="dropdown-item" to='/find'>Find Wedding</Link>
+            </div>
+          </div>
+
         </div>
       </div>
     );
