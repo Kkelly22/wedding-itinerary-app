@@ -29,8 +29,18 @@ class FindContainer extends Component {
     return (
       <div>
         <h1>Find Wedding</h1>
-        <div>
+        
+        <div class="dropdown dropleft">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <Link class="dropdown-item" to='/login'>Log In</Link>
+            <Link class="dropdown-item" to='/signup'>Sign Up</Link>
+          </div>
         </div>
+
         <div class="login-container">
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
             <label>Wedding Code</label>
@@ -39,18 +49,6 @@ class FindContainer extends Component {
             <input type="submit" />
           </form>
           <br />
-
-          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-bars"></i>
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <Link class="dropdown-item" to='/login'>Log In</Link>
-              <Link class="dropdown-item" to='/signup'>Sign Up</Link>
-            </div>
-          </div>
-          
         </div>
       </div>
     );
