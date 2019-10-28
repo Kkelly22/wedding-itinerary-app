@@ -24,23 +24,23 @@ class PlansContainer extends Component {
         <WeddingInfo user={this.props.current}/>
         <div class="plans-blur">
         </div>
+        
+        <div class="dropdown dropleft">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <Link class="dropdown-item" to='/login'>Log Out</Link>
+          </div>
+        </div>
+
         <div class="plans-container">
           <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} fetchPlan={this.props.fetchPlan} />
           <PlanInput user={this.props.current} plan={this.props.current_plan}/>
           <WeddingCountdown user={this.props.current} />
           <br />
           <br />
-
-          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-bars"></i>
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <Link class="dropdown-item" to='/login'>Log Out</Link>
-            </div>
-          </div>
-
         </div>
       </div>
     )
