@@ -44,8 +44,18 @@ class SignupContainer extends Component {
     return (
       <div>
         <h1>Sign Up</h1>
-        <div>
+        
+        <div class="dropdown dropleft">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <Link class="dropdown-item" to='/login'>Login</Link>
+            <Link class="dropdown-item" to='/find'>Find Wedding</Link>
+          </div>
         </div>
+
         <div class="signup-container">
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
 
@@ -88,16 +98,7 @@ class SignupContainer extends Component {
           </form>
           <br />
 
-          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-bars"></i>
-            </a>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <Link class="dropdown-item" to='/login'>Login</Link>
-              <Link class="dropdown-item" to='/find'>Find Wedding</Link>
-            </div>
-          </div>
 
         </div>
       </div>
