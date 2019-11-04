@@ -22,8 +22,6 @@ class PlansContainer extends Component {
         <UserInfo user={this.props.current}/>
         <br />
         <WeddingInfo user={this.props.current}/>
-        <div class="plans-blur">
-        </div>
         
         <div class="dropdown dropleft">
           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
