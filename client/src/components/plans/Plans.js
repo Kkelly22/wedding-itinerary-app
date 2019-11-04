@@ -6,25 +6,10 @@ class Plans extends Component {
   render(){
   	const plans = !!this.props.plans ? this.props.plans.map(plan => <Plan key={plan.id} plan={plan} deletePlan={this.props.deletePlan} fetchPlan={this.props.fetchPlan}/>) : []
   return (
-    <div className="plan-header">
-    <h2>Wedding Day Itinerary</h2>
-     <table align="center">
-     	<thead>
-          <tr>
-            <th>Description</th>
-            <th>Vendor</th>
-            <th>Location</th>
-            <th>Time</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
+    <div className="plan-list">
+        <ol>
             {plans}
-          </tr>
-        </tbody>
-      </table>
+        </ol>
     </div>
   );
  };
