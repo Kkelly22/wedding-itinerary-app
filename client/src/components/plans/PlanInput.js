@@ -76,7 +76,6 @@ class PlanInput extends Component {
 
     return (
       <div className="plan-input">
-      <h3>Add to the Itinerary:</h3>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <p>
           <label>Plan Description</label>
@@ -98,7 +97,7 @@ class PlanInput extends Component {
           <input type="datetime-local" name="time" value={this.state.time} onChange={(event) => this.handleOnChange(event)} />
           </p>
           
-        <input type="submit" />
+        <input type="submit" value="Add" />
         </form>
       </div>
     );
