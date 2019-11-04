@@ -36,8 +36,8 @@ class PlansContainer extends Component {
         </div>
 
         <div class="plans-container">
-          <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} fetchPlan={this.props.fetchPlan} />
           <PlanInput user={this.props.current} plan={this.props.current_plan}/>
+          <Plans plans={this.props.plans} deletePlan={this.props.deletePlan} fetchPlan={this.props.fetchPlan} />
           <WeddingCountdown user={this.props.current} />
           <br />
           <br />
