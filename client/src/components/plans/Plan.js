@@ -18,16 +18,12 @@ class Plan extends Component {
 
     return (
       <div className="plan-data">
-        <td>{plan.description}</td>
-        <td>{plan.vendor}</td>
-        <td>{plan.location}</td>
-        <td> <Moment parse="YYYY-MM-DD HH:mm">{plan.time}</Moment></td>
-        <td> 
+        <li>
+          {plan.description} - {plan.vendor} - {plan.location} - <Moment parse="YYYY-MM-DD HH:mm">{plan.time}</Moment> - 
           <button onClick={() => this.handleOnSubmit()}> {this.state.count % 2 === 0 ? "Complete" : "Finished"} </button>
           <button onClick={() => this.props.deletePlan(plan)}> Delete </button>
           <button onClick={() => this.props.fetchPlan(plan)}> Edit </button>
-        </td>
-        
+        </li>
       </div>
     );
   }
