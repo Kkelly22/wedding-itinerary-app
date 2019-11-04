@@ -89,17 +89,21 @@ body {
 /* CSS applied to Plans */
 .plan-list {
   background-image: url("linedpaper.png");
-  position: absolute;
+  margin: 0 auto;
+  padding: 45px;
+  width: 100%;
 
 }
 
 .plan-data {
-  text-align: left;
+  text-align: center;
+  padding:10px;
 }
 
 .plan-input {
-  position: absolute;
-  right: 0px;
+  margin: 0 auto;
+  padding: 55px;
+  width: 80%;
 }
 
 
@@ -203,7 +207,6 @@ body {
   top:30%;
   left:0px;
 }
-
 
 
 
